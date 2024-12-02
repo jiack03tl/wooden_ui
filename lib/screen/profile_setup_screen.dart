@@ -59,7 +59,12 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                     hintText: TextResources.enterEmail,
                   ),
                   gap24,
-                  Text("mobile1212 number"),
+                  CustomText(
+                      text: TextResources.enterEmail,
+                      fontsize: 14,
+                      fontweight: FontWeight.w400,
+                      fontColor: ColorsRecourse.textDarkColor),
+                  gap6,
                   Row(
                     children: [
                       SizedBox(
@@ -67,15 +72,20 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                         width: 85,
                         child: TextField(
                           decoration: InputDecoration(
-                              label: CustomText(
-                                  text: "912",
-                                  fontsize: 15,
-                                  fontweight: FontWeight.w300,
-                                  fontColor: ColorsRecourse.grey),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide:
-                                      BorderSide(color: ColorsRecourse.grey))),
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
+                            label: CustomText(
+                                text: "912",
+                                fontsize: 15,
+                                fontweight: FontWeight.w300,
+                                fontColor: ColorsRecourse.grey),
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide:
+                                    BorderSide(color: ColorsRecourse.grey)),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
                         ),
                       ),
                       gap8,
@@ -85,15 +95,21 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                             height: 44,
                             child: TextField(
                               decoration: InputDecoration(
-                                  label: CustomText(
-                                      text: "912",
-                                      fontsize: 15,
-                                      fontweight: FontWeight.w300,
-                                      fontColor: ColorsRecourse.textDarkColor),
-                                  enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(
-                                          color: ColorsRecourse.grey))),
+                                floatingLabelBehavior:
+                                    FloatingLabelBehavior.never,
+                                label: CustomText(
+                                    text: "912",
+                                    fontsize: 15,
+                                    fontweight: FontWeight.w300,
+                                    fontColor: ColorsRecourse.textDarkColor),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide:
+                                        BorderSide(color: ColorsRecourse.grey)),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
                             ),
                           ),
                         ),

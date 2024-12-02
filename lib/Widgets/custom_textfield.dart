@@ -17,14 +17,16 @@ class _CustomTextfieldState extends State<CustomTextfield> {
       height: 44,
       child: TextField(
         decoration: InputDecoration(
-            // hintText: "hahaha",
-            label: Text("data"),
-            floatingLabelBehavior: FloatingLabelBehavior.never,
-            enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(color: ColorsRecourse.grey)),
-            focusedBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
+          // hintText: "hahaha",
+          label: Text(widget.hintText),
+          floatingLabelBehavior: FloatingLabelBehavior.never,
+          enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: ColorsRecourse.grey)),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
       ),
     );
   }

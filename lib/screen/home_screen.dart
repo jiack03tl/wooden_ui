@@ -6,6 +6,7 @@ import 'package:furniture_app/Widgets/custom_text.dart';
 import 'package:furniture_app/resources/color_resources.dart';
 import 'package:furniture_app/resources/text_resources.dart';
 import 'package:furniture_app/utils/constants/image_constants.dart';
+import 'package:furniture_app/utils/constants/ui_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -191,9 +192,7 @@ Widget custContainer() {
           ),
         )
       ]),
-      const SizedBox(
-        height: 16,
-      ),
+      gap16,
       Expanded(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

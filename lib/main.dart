@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const ProfileSetupScreen(),
+      home: const HomeScreen(),
     );
   }
 }
