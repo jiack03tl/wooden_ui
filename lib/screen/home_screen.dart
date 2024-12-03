@@ -50,11 +50,13 @@ class _HomeScreenState extends State<HomeScreen> {
           NavigationDestination(
             enabled: false,
             selectedIcon: SvgPicture.asset(
-              "assets/app_icon/cart.svg",
+              ImageConst.cart,
               height: 50,
               width: 50,
             ),
-            icon: SvgPicture.asset("assets/app_icon/cart.svg"),
+            icon: SvgPicture.asset(
+              ImageConst.cart,
+            ),
             label: '',
           ),
           NavigationDestination(
@@ -82,20 +84,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 35,
                     ),
                   ),
-                  SvgPicture.asset("assets/app_icon/search.svg"),
-                  SvgPicture.asset("assets/app_icon/search.svg"),
-                  SvgPicture.asset("assets/app_icon/search.svg"),
+                  SvgPicture.asset(
+                    ImageConst.search,
+                  ),
+                  SvgPicture.asset(ImageConst.search),
+                  SvgPicture.asset(ImageConst.cart),
                 ],
               ),
               Stack(children: [
                 SizedBox(
                   height: 152,
-                  width: 392,
+                  width: 395,
                   child: CarouselView(itemExtent: 392, children: [
-                    Image.asset(
-                      "assets/images/sliderimg.png",
+                    Image.network(
+                      "https://www.umodern.com/fimages/71083.jpg",
                       fit: BoxFit.fill,
-                    )
+                    ),
                   ]),
                 ),
                 Padding(
@@ -171,8 +175,7 @@ Widget custContainer() {
           width: 181,
           decoration: BoxDecoration(
               image: const DecorationImage(
-                  image: AssetImage("assets/images/chair.png"),
-                  fit: BoxFit.fill),
+                  image: AssetImage(ImageConst.chair), fit: BoxFit.fill),
               color: Colors.grey,
               borderRadius: BorderRadius.circular(10)),
         ),

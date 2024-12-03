@@ -18,7 +18,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'screen/choose_language_Screen.dart';
 // import 'package:furniture_app/fake_json/faker_json_data.dart';
-// import 'package:furniture_app/fake_json/local_json_data.dart';9
+// import 'package:furniture_app/fake_json/local_json_data.dart';
 
 void main() {
   runApp(const MyApp());

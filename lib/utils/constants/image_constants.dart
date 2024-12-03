@@ -15,4 +15,5 @@ class ImageConst {
 
   //Images - start with img
   static const String imgAppLogo = "$icons/app.png";
+  static const String chair = "$assets/images/chair.png";
 }
