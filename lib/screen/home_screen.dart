@@ -40,11 +40,13 @@ class _HomeScreenState extends State<HomeScreen> {
           NavigationDestination(
             enabled: false,
             selectedIcon: SvgPicture.asset(
-              "assets/app_icon/cart.svg",
+              ImageConst.cart,
               height: 50,
               width: 50,
             ),
-            icon: SvgPicture.asset("assets/app_icon/cart.svg"),
+            icon: SvgPicture.asset(
+              ImageConst.cart,
+            ),
             label: '',
           ),
           NavigationDestination(
@@ -62,11 +64,13 @@ class _HomeScreenState extends State<HomeScreen> {
           NavigationDestination(
             enabled: false,
             selectedIcon: SvgPicture.asset(
-              "assets/app_icon/cart.svg",
+              ImageConst.cart,
               height: 50,
               width: 50,
             ),
-            icon: SvgPicture.asset("assets/app_icon/cart.svg"),
+            icon: SvgPicture.asset(
+              ImageConst.cart,
+            ),
             label: '',
           ),
         ],
@@ -80,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Expanded(
                     child: SvgPicture.asset(
-                      "assets/app_icon/athathi.svg",
+                      ImageConst.cart,
                       height: 35,
                     ),
                   ),
