@@ -77,14 +77,14 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(right: 24.0, top: 40, left: 24),
+          padding: p24.copyWith(top: 40),
           child: Column(
             children: [
               Row(
                 children: [
                   Expanded(
                     child: SvgPicture.asset(
-                      ImageConst.cart,
+                      ImageConst.logo,
                       height: 35,
                     ),
                   ),
@@ -106,8 +106,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ]),
                 ),
+                gap36,
                 Padding(
-                  padding: const EdgeInsets.only(top: 35, left: 10),
+                  padding: const EdgeInsets.only(left: 10),
                   child: CustomText(
                       text: TextResources.evalteYourSpace,
                       fontsize: 20,
@@ -119,32 +120,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 14, right: 4),
-                    child: Container(
-                      height: 6,
-                      width: 6,
-                      decoration: const BoxDecoration(
-                          color: Colors.brown, shape: BoxShape.circle),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 14, right: 4),
-                    child: Container(
-                      height: 6,
-                      width: 6,
-                      decoration: const BoxDecoration(
-                          color: Colors.grey, shape: BoxShape.circle),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 14, right: 4),
-                    child: Container(
-                      height: 6,
-                      width: 6,
-                      decoration: const BoxDecoration(
-                          color: Colors.grey, shape: BoxShape.circle),
-                    ),
+                  Row(
+                    children: [
+                      Container(
+                        height: 6,
+                        width: 6,
+                        decoration: const BoxDecoration(
+                            color: Colors.brown, shape: BoxShape.circle),
+                      ),
+                      Container(
+                        height: 6,
+                        width: 6,
+                        decoration: const BoxDecoration(
+                            color: Colors.grey, shape: BoxShape.circle),
+                      ),
+                      Container(
+                        height: 6,
+                        width: 6,
+                        decoration: const BoxDecoration(
+                            color: Colors.grey, shape: BoxShape.circle),
+                      ),
+                    ],
                   ),
                 ],
               ),
