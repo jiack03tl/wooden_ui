@@ -22,14 +22,14 @@ class _LogInScreenState extends State<LogInScreen> {
             prefs.setString("logInStatus", "login");
             var showStatus = prefs.getString("logInStatus");
             log(showStatus.toString());
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => DashboardScreen()));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const DashboardScreen()));
           },
           child: Container(
             height: 50,
             width: 300,
             color: Colors.green,
-            child: Center(
+            child: const Center(
               child: Text("Login"),
             ),
           ),
