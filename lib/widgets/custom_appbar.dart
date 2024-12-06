@@ -12,7 +12,7 @@ class _CustomAppbarState extends State<CustomAppbar> {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
-        children: [Image.asset("assets/images/athathi.svg")],
+        children: [Image.asset("assets/images/ic_logo.svg")],
       ),
     );
   }

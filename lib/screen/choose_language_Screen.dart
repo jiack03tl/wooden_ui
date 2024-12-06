@@ -6,7 +6,7 @@ import 'package:furniture_app/Widgets/custom_button.dart';
 import 'package:furniture_app/Widgets/custom_text.dart';
 import 'package:furniture_app/resources/color_resources.dart';
 import 'package:furniture_app/resources/text_resources.dart';
-import 'package:furniture_app/screen/home_screen.dart';
+import 'package:furniture_app/features/dashboard/screens/home_screen.dart';
 import 'package:furniture_app/utils/constants/ui_constants.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -38,10 +38,8 @@ class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 589),
                 child: CustomText(
-                    text: TextResources.chooseLang,
-                    fontsize: 28,
-                    fontweight: FontWeight.w700,
-                    fontColor: ColorsRecourse.textDarkColor),
+                  text: TextResources.chooseLang,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 16.0),
@@ -63,7 +61,7 @@ class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
                           decoration: BoxDecoration(
                             // color: Colors.red,
                             border: Border.all(
-                                width: 1, color: ColorsRecourse.grey_),
+                                width: 1, color: ColorsRecourse.darkGrey),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Row(
@@ -80,10 +78,8 @@ class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
                                     });
                                   }),
                               CustomText(
-                                  text: TextResources.english,
-                                  fontsize: 16,
-                                  fontweight: FontWeight.w300,
-                                  fontColor: ColorsRecourse.blueText)
+                                text: TextResources.english,
+                              )
                             ],
                           ),
                         ),
@@ -94,7 +90,7 @@ class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
                           decoration: BoxDecoration(
                               // color: Colors.red,
                               border: Border.all(
-                                  width: 1, color: ColorsRecourse.grey_),
+                                  width: 1, color: ColorsRecourse.darkGrey),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             children: [
@@ -110,10 +106,8 @@ class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
                                     });
                                   }),
                               CustomText(
-                                  text: TextResources.arabic,
-                                  fontsize: 16,
-                                  fontweight: FontWeight.w300,
-                                  fontColor: ColorsRecourse.blueText),
+                                text: TextResources.arabic,
+                              ),
                             ],
                           ),
                         ),

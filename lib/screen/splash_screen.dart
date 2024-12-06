@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/resources/color_resources.dart';
 import 'package:furniture_app/screen/choose_language_Screen.dart';
 import 'package:furniture_app/screen/dashboard_screen.dart';
-import 'package:furniture_app/screen/home_screen.dart';
-
-import 'package:furniture_app/screen/login_screen.dart';
+import 'package:furniture_app/features/dashboard/screens/home_screen.dart';
 import 'package:furniture_app/screen/welcome_screen.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,11 +26,11 @@ class _SplashScreenState extends State<SplashScreen> {
         prefs.containsKey("isFirstKeyStatus") == false) {
       log("no need to go welcome page");
 
-      Get.to(WelcomeScreen());
+      Get.to(const WelcomeScreen());
     } else if (prefs.containsKey("language") == false) {
       Get.to(const ChooseLanguageScreen());
     } else {
-      Get.to(const HomeScreen());
+      Get.to(const ChooseLanguageScreen());
     }
   }
 

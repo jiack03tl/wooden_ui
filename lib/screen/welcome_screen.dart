@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/Widgets/custom_text.dart';
 import 'package:furniture_app/resources/text_resources.dart';
 import 'package:furniture_app/screen/choose_language_Screen.dart';
-import 'package:furniture_app/screen/home_screen.dart';
+import 'package:furniture_app/features/dashboard/screens/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -64,9 +64,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 padding: const EdgeInsets.only(left: 24),
                 child: CustomText(
                     text: TextResources.do_EffortlessShopping,
-                    fontsize: 18,
-                    fontweight: FontWeight.w300,
-                    fontColor: ColorsRecourse.textDarkColor),
+                    ),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 24, bottom: 30),
@@ -79,9 +77,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         padding: const EdgeInsets.only(right: 8.0),
                         child: CustomText(
                             text: TextResources.letsGetStarted,
-                            fontsize: 18,
-                            fontweight: FontWeight.w300,
-                            fontColor: ColorsRecourse.brown),
+                          ),
                       ),
                       GestureDetector(
                         onTap: () async {

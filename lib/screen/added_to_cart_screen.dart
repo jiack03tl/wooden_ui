@@ -30,7 +30,7 @@ class _AddedToCartScreenState extends State<AddedToCartScreen> {
                     width: 141,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             image: AssetImage("assets/images/chair.png"))),
                   ),
                   // SizedBox(
@@ -42,9 +42,6 @@ class _AddedToCartScreenState extends State<AddedToCartScreen> {
                         children: [
                           CustomText(
                             text: "Vendors Name",
-                            fontsize: 14,
-                            fontColor: Colors.grey,
-                            fontweight: FontWeight.w400,
                           ),
                           CustomRating(
                             fontweight: FontWeight.w400,

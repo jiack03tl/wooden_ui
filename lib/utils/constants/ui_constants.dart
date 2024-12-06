@@ -28,11 +28,28 @@ SizedBox gap(double size) => SizedBox(height: size, width: size);
 SizedBox hgap(double size) => SizedBox(width: size);
 SizedBox vgap(double size) => SizedBox(height: size);
 
+// font size
+double fSize8 = 8;
+double fSize12 = 12;
+double fSize14 = 14;
+double fSize16 = 16;
+double fSize18 = 18;
+double fSize20 = 20;
+double fSize22 = 22;
+double fSize24 = 24;
+double fSize28 = 28;
+double fSize30 = 30;
+double fSize40 = 40;
+double fSize54 = 54;
+double fSize60 = 60;
+double fSize70 = 70;
+
 // EdgeInsets
 const EdgeInsets p4 = EdgeInsets.all(4);
 const EdgeInsets p8 = EdgeInsets.all(8);
 const EdgeInsets p12 = EdgeInsets.all(12);
-// const EdgeInsets p16 = EdgeInsets.all(16);
+const EdgeInsets p14 = EdgeInsets.all(14);
+const EdgeInsets p16 = EdgeInsets.all(16);
 const EdgeInsets p24 = EdgeInsets.all(24);
 const EdgeInsets p32 = EdgeInsets.all(32);
 const EdgeInsets p48 = EdgeInsets.all(48);
@@ -46,6 +63,8 @@ const EdgeInsets px24 = EdgeInsets.symmetric(horizontal: 24);
 const EdgeInsets px32 = EdgeInsets.symmetric(horizontal: 32);
 const EdgeInsets px48 = EdgeInsets.symmetric(horizontal: 48);
 EdgeInsets padX(double paddingX) => EdgeInsets.symmetric(horizontal: paddingX);
+EdgeInsets padXY(double paddingX, double paddingY) =>
+    EdgeInsets.symmetric(horizontal: paddingX, vertical: paddingY);
 
 const EdgeInsets py4 = EdgeInsets.symmetric(vertical: 4);
 const EdgeInsets py8 = EdgeInsets.symmetric(vertical: 8);

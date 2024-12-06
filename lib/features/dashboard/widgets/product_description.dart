@@ -53,9 +53,6 @@ class _CustomGridviewState extends State<CustomGridview> {
               children: [
                 CustomText(
                   text: "Vendors Name",
-                  fontsize: 14,
-                  fontColor: Colors.grey,
-                  fontweight: FontWeight.w400,
                 ),
                 CustomRating(
                   fontweight: FontWeight.w400,
@@ -65,27 +62,17 @@ class _CustomGridviewState extends State<CustomGridview> {
             ),
             CustomText(
               text: "Pashe Fabric Accent Chair",
-              fontsize: 16,
-              fontColor: const Color(0xff0F1313),
-              fontweight: FontWeight.w300,
             ),
             Row(
               children: [
                 CustomText(
                   text: "KWD 599",
-                  fontsize: 16,
-                  fontColor: const Color(0xff0F1313),
-                  fontweight: FontWeight.w600,
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 CustomText(
-                  cutLine: TextDecoration.lineThrough,
                   text: "KWD 599",
-                  fontsize: 16,
-                  fontColor: const Color(0xff0F1313),
-                  fontweight: FontWeight.w300,
                 ),
               ],
             ),

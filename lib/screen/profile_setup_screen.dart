@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/Widgets/custom_button.dart';
 import 'package:furniture_app/Widgets/custom_text.dart';
 import 'package:furniture_app/Widgets/custom_textfield.dart';
+import 'package:furniture_app/features/dashboard/screens/home_screen.dart';
 import 'package:furniture_app/resources/color_resources.dart';
 import 'package:furniture_app/resources/text_resources.dart';
 import 'package:furniture_app/utils/constants/ui_constants.dart';
+import 'package:furniture_app/utils/extension/build_context_extension.dart';
+import 'package:furniture_app/utils/extension/text_style_extension.dart';
+import 'package:furniture_app/widgets/phone_number.dart';
+import 'package:furniture_app/widgets/phone_number_country_code.dart';
 
 class ProfileSetupScreen extends StatefulWidget {
   const ProfileSetupScreen({super.key});
@@ -13,6 +19,9 @@ class ProfileSetupScreen extends StatefulWidget {
 }
 
 class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
+  List<String> city = ["city1", "city2", "city3"];
+  var dropdownValue;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,143 +37,136 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CustomText(
-                      text: TextResources.profileSetup,
-                      fontsize: 28,
-                      fontweight: FontWeight.w700,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.profileSetup,
+                    style: context.titleMedium.copyWith(
+                        fontSize: fSize28, fontWeight: FontWeight.w700),
+                  ),
                   gap12,
                   CustomText(
-                      text: TextResources.completeYour,
-                      fontsize: 16,
-                      fontweight: FontWeight.w300,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.completeYour,
+                    style: context.labelMedium.copyWith(
+                      fontSize: fSize16,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
                   gap6,
                   CustomText(
-                      text: TextResources.fullName,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.fullName,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
+                  gap6,
+                  CustomTextfield(
+                    hintText: TextResources.fullName,
+                  ),
+                  gap24,
+                  CustomText(
+                    text: TextResources.enterEmail,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
                   gap6,
                   CustomTextfield(
                     hintText: TextResources.enterEmail,
                   ),
                   gap24,
                   CustomText(
-                      text: TextResources.enterEmail,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
-                  gap6,
-                  CustomTextfield(
-                    hintText: TextResources.enterEmail,
+                    text: TextResources.mobileNumber,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
                   ),
-                  gap24,
-                  CustomText(
-                      text: TextResources.enterEmail,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
                   gap6,
-                  Row(
+                  const Row(
                     children: [
                       SizedBox(
-                        height: 44,
-                        width: 85,
-                        child: TextField(
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.never,
-                            label: CustomText(
-                                text: "912",
-                                fontsize: 15,
-                                fontweight: FontWeight.w300,
-                                fontColor: ColorsRecourse.grey),
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide:
-                                    BorderSide(color: ColorsRecourse.grey)),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                        ),
-                      ),
-                      gap8,
+                          height: 44, width: 85, child: PhoneNumberWidget()),
+                      gap12,
                       Expanded(
-                        child: Container(
-                          child: SizedBox(
-                            height: 44,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                label: CustomText(
-                                    text: "912",
-                                    fontsize: 15,
-                                    fontweight: FontWeight.w300,
-                                    fontColor: ColorsRecourse.textDarkColor),
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                    borderSide:
-                                        BorderSide(color: ColorsRecourse.grey)),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: SizedBox(height: 44, child: PhoneNumber()),
                       ),
                     ],
                   ),
+                  gap12,
                   CustomText(
-                      text: TextResources.fullName,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.governet,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
                   gap6,
-                  CustomTextfield(
-                    hintText: TextResources.enterName,
+                  DropdownMenu<String>(
+                    width: 382,
+                    initialSelection: city.first,
+                    onSelected: (String? value) {
+                      // This is called when the user selects an item.
+                      setState(() {
+                        dropdownValue = value!;
+                      });
+                    },
+                    dropdownMenuEntries:
+                        city.map<DropdownMenuEntry<String>>((String value) {
+                      return DropdownMenuEntry<String>(
+                          value: value, label: value);
+                    }).toList(),
                   ),
                   gap24,
                   CustomText(
-                      text: TextResources.fullName,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.area,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
                   gap6,
-                  CustomTextfield(
-                    hintText: TextResources.enterName,
+                  DropdownMenu<String>(
+                    width: 382,
+                    initialSelection: city.first,
+                    onSelected: (String? value) {
+                      // This is called when the user selects an item.
+                      setState(() {
+                        dropdownValue = value!;
+                      });
+                    },
+                    dropdownMenuEntries:
+                        city.map<DropdownMenuEntry<String>>((String value) {
+                      return DropdownMenuEntry<String>(
+                          value: value, label: value);
+                    }).toList(),
                   ),
                   gap24,
                   CustomText(
-                      text: TextResources.fullName,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.streetNo,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
                   gap6,
                   CustomTextfield(
-                    hintText: TextResources.enterName,
+                    hintText: TextResources.enterStreet,
                   ),
                   gap24,
                   CustomText(
-                      text: TextResources.fullName,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.fullName,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
                   gap6,
                   CustomTextfield(
-                    hintText: TextResources.enterName,
+                    hintText: TextResources.building,
                   ),
                   gap24,
                   CustomText(
-                      text: TextResources.fullName,
-                      fontsize: 14,
-                      fontweight: FontWeight.w400,
-                      fontColor: ColorsRecourse.textDarkColor),
+                    text: TextResources.floor,
+                    style: context.labelMedium
+                        .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
                   gap6,
                   CustomTextfield(
-                    hintText: TextResources.enterName,
+                    hintText: TextResources.enterFloor,
                   ),
+                  gap30,
+                  CustomElevatedBottun(
+                      txtColor: ColorsRecourse.white,
+                      onPress: () {},
+                      btnColor: ColorsRecourse.brown,
+                      txt: TextResources.submit),
+                  gap16
                 ],
               ),
             ),

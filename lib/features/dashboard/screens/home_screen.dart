@@ -11,6 +11,7 @@ import 'package:furniture_app/resources/color_resources.dart';
 import 'package:furniture_app/resources/text_resources.dart';
 import 'package:furniture_app/utils/constants/image_constants.dart';
 import 'package:furniture_app/utils/constants/ui_constants.dart';
+import 'package:furniture_app/utils/extension/build_context_extension.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -97,16 +98,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomText(
-                          text: TextResources.category,
-                          fontsize: 16,
-                          fontweight: FontWeight.w700,
-                          fontColor: ColorsRecourse.textDarkColor),
+                        text: TextResources.category,
+                      ),
                       CustomText(
-                          text: TextResources.viewAll,
-                          cutLine: TextDecoration.underline,
-                          fontsize: 16,
-                          fontweight: FontWeight.w400,
-                          fontColor: ColorsRecourse.brown),
+                        text: TextResources.viewAll,
+                      ),
                     ],
                   ),
                   const CustomCategoryList()
@@ -134,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-Widget custContainer() {
+Widget custContainer(BuildContext context) {
   return SizedBox(
     height: 300,
     width: 180,
@@ -173,9 +169,6 @@ Widget custContainer() {
             children: [
               CustomText(
                 text: "Vendors Name",
-                fontsize: 14,
-                fontColor: Colors.grey,
-                fontweight: FontWeight.w400,
               ),
               gap24,
               CustomRating(
@@ -186,26 +179,17 @@ Widget custContainer() {
           ),
         ),
         CustomText(
+          style: context.titleSmall,
           text: "Pashe Fabric Accent Chair",
-          fontsize: 16,
-          fontColor: const Color(0xff0F1313),
-          fontweight: FontWeight.w300,
         ),
         Row(
           children: [
             CustomText(
               text: "KWD 599",
-              fontsize: 16,
-              fontColor: const Color(0xff0F1313),
-              fontweight: FontWeight.w600,
             ),
             gap10,
             CustomText(
-              cutLine: TextDecoration.lineThrough,
               text: "KWD 599",
-              fontsize: 16,
-              fontColor: const Color(0xff0F1313),
-              fontweight: FontWeight.w300,
             ),
           ],
         ),
@@ -223,9 +207,6 @@ productDescription() {
           children: [
             CustomText(
               text: "Vendors Name",
-              fontsize: 14,
-              fontColor: Colors.grey,
-              fontweight: FontWeight.w400,
             ),
             CustomRating(
               fontweight: FontWeight.w400,
@@ -236,9 +217,6 @@ productDescription() {
       ),
       CustomText(
         text: "Pashe Fabric Accent Chair",
-        fontsize: 16,
-        fontColor: const Color(0xff0F1313),
-        fontweight: FontWeight.w300,
       ),
     ],
   );
@@ -281,9 +259,6 @@ productTypes() {
           children: [
             CustomText(
               text: "Vendors Name",
-              fontsize: 14,
-              fontColor: Colors.grey,
-              fontweight: FontWeight.w400,
             ),
             CustomRating(
               fontweight: FontWeight.w400,
@@ -294,27 +269,17 @@ productTypes() {
       ),
       CustomText(
         text: "Pashe Fabric Accent Chair",
-        fontsize: 16,
-        fontColor: const Color(0xff0F1313),
-        fontweight: FontWeight.w300,
       ),
       Row(
         children: [
           CustomText(
             text: "KWD 599",
-            fontsize: 16,
-            fontColor: const Color(0xff0F1313),
-            fontweight: FontWeight.w600,
           ),
           const SizedBox(
             width: 10,
           ),
           CustomText(
-            cutLine: TextDecoration.lineThrough,
             text: "KWD 599",
-            fontsize: 16,
-            fontColor: const Color(0xff0F1313),
-            fontweight: FontWeight.w300,
           ),
         ],
       ),

@@ -28,24 +28,16 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
               ),
               CustomText(
                 text: TextResources.letsGetStarted,
-                fontsize: 28,
-                fontweight: FontWeight.w700,
-                fontColor: ColorsRecourse.textDarkColor,
               ),
               const SizedBox(
                 height: 10,
               ),
               CustomText(
                 text: TextResources.unlockYourDreamSpaceWithAfewTaps,
-                fontsize: 16,
-                fontweight: FontWeight.w300,
-                fontColor: ColorsRecourse.taglineColor,
               ),
               CustomText(
-                  text: TextResources.mobileNumber,
-                  fontsize: 14,
-                  fontweight: FontWeight.w400,
-                  fontColor: ColorsRecourse.grey_),
+                text: TextResources.mobileNumber,
+              ),
               const SizedBox(
                 height: 5,
               ),
